@@ -19,7 +19,21 @@
 #
 def triangle(a, b, c):
     # DELETE 'PASS' AND WRITE THIS CODE
-    pass
+
+    if not a and not b and not c: raise TriangleError
+    if a < 0 or b < 0 or c <0 : raise TriangleError
+    if a==b and b<c: raise TriangleError
+    if a==c and c<b: raise TriangleError
+    if b==c and c<a: raise TriangleError
+      
+
+    if a==b and b==c:
+      return "equilateral"
+
+    if a==b or a==c or b==c:
+      return "isosceles"
+
+    return "scalene"  
 
 
 # Error class used in part 2.  No need to change this code.
